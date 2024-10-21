@@ -34,11 +34,11 @@ fn main() {
 		2, 5, 6, 9, 8, 3, 1, 5, 5, 2, 0, 0, 0, 5, 5, 9, 3, 5, 7, 2, 9, 7, 2, 5, 7, 1, 6, 3, 6,
 		2, 6, 9, 5, 6, 1, 8, 8, 2, 6, 7, 0, 4, 2, 8, 2, 5, 2, 4, 8, 3, 6, 0, 0, 8, 2, 3, 2, 5,
 		7, 5, 3, 0, 4, 2, 0, 7, 5, 2, 9, 6, 3, 4, 5, 0]
-	mut max := 0
+	mut max := u64(0)
 	mut index := 0
 
 	for index + 13 < digits.len {
-		mut product := 1
+		mut product := u64(1)
 		mut has_zero := false
 		for i in 0 .. 13 {
 			if digits[index + i] == 0 {
@@ -46,7 +46,7 @@ fn main() {
 				index += i + 1
 				break
 			}
-			product *= digits[index + i]
+			product *= u64(digits[index + i])
 		}
 		if !has_zero && product > max {
 			max = product
