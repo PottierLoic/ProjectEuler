@@ -11,10 +11,7 @@ fn is_pal(n i64) bool {
 }
 
 fn main() {
-	mut num1 := 0
-	mut num2 := 0
 	mut max := 0
-
 	for i in 100 .. 999 {
 		for j in 100 .. 999 {
 			result := i * j
